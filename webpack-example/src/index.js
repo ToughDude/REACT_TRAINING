@@ -54,7 +54,6 @@ let  React = {
     createElement: (tag, props, ...children) => {
         var element = {tag, props: {...props, children}};
         console.log(element);
-        var domElement = document.createElement(tag);
         return element;
     }
 }
