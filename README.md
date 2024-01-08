@@ -158,3 +158,19 @@ let _f = function ()(
 <script src="bundle.js"> </script>
 
 <script src="bundle.gedf#ds15.js"> </script>
+
+https://createapp.dev/webpack
+
+https://rxmarbles.com/
+
+npm run dev
+
+> webpack-example@1.0.0 dev
+> webpack --mode development
+
+asset bundle.ef97c131.js 6.42 KiB 
+
+npm run prod
+bundle.feea7007.js 914 bytes
+
+npm start
