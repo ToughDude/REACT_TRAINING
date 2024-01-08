@@ -8,7 +8,7 @@ export default class ProductRow extends Component {
             Name: {name} <br />
             Price : {price} <br />
             Category : {cateogry} <br />
-            <button>Delete</button>
+            <button onClick={() => this.props.delEvent(id)}>Delete</button>
         </div>
     }
 }

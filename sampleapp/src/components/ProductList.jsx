@@ -1,5 +1,6 @@
 import { Component } from "react";
 import ProductRow from "./ProductRow";
+import Filter from "./Filter";
 
 export default class ProductList extends Component {
     state = {
@@ -37,10 +38,37 @@ export default class ProductList extends Component {
         ]
     }
 
+    componentDidMount() {
+        this.setState({
+            original: this.state.products
+        })
+    }
+    filterProducts(txt) {
+        let prds = this.state
+            .original.filter(p => p.name.toUpperCase().indexOf(txt.toUpperCase()) >= 0)
+
+        this.setState({
+            products: prds
+        })
+    }
+    deleteProduct(id) {
+        let prds = this.state.products.filter(p => p.id !== id);
+        //update the state
+        // this.state.products = prds; // don't use this
+
+        // async function
+        this.setState({
+            products: prds
+        })
+    }
     render() {
         return <div>
+            <Filter filterEvent={(txt) => this.filterProducts(txt)}/>
             {
-                this.state.products.map(product => <ProductRow product={product}/>)
+                this.state.products.map(product => <ProductRow
+                    delEvent={(id) => this.deleteProduct(id)}
+                    key={product.id}
+                    product={product} />)
             }
         </div>
     }
