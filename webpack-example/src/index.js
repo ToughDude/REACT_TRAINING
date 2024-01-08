@@ -49,3 +49,36 @@ let toDiv = (elem) => {
 let cards = map(products, toDiv);
 
 cards.forEach(card => console.log(card));
+
+let  React = {
+    createElement: (tag, props, ...children) => {
+        var element = {tag, props: {...props, children}};
+        console.log(element);
+        var domElement = document.createElement(tag);
+        return element;
+    }
+}
+
+let product = (
+    <div className="card">
+        <h1 className="card-header">
+            Wacom Tablet
+        </h1>
+        <p>Rs. 4200.00</p>
+    </div>
+);
+
+function render(element, container) {
+    if(["string","number"].includes(typeof element)) {
+        container.appendChild(document.createTextNode(element));
+        return;
+    }
+
+    var domElement = document.createElement(element.tag);
+    if(element.props.children) {
+        element.props.children.forEach(child => render(child, domElement))
+    }
+    container.appendChild(domElement);
+}
+
+render(product, document.getElementById("root"))
