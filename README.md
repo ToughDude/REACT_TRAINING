@@ -20,3 +20,141 @@ Chrome Web Browser
 NodeJS Latest LTS
 
 =============
+
+Rendering
+
+Server Side Rendering
+* Servlet --> JSP / Thymeleaf
+* NodeJS --> Handlebars / Mustache / Underscore / Jade / Pug / EJS
+
+Client Side Rendering
+
+Web technologies
+* JS --> DOM
+document.createElement("div")
+
+document.appendChild(...)
+
+document.querySelector("div")
+
+* jQuery
+
+* Templates
+Handlebars / Mustache / Underscore 
+
+
+
+{{firstName}}
+
+#firstName
+
+_.firstName
+
+----------
+
+MVC Architecuture
+
+* Backbone
+
+* AngularJS --> google --> Framework 
+
+* XHP / FaxJS --> 2011 --> Marcel Laverdt
+
+* 2015 --> ReactJS
+
+* Angular / Vue / ....
+
+
+==============
+
+NodeJS
+--> Platform built on top of JavaScript engine [V8 / JavaScriptVM / SpiderMonkey / IonMonkey]
+--> libuv async librarires
+* Client side Web application development
+--> ES2015+
+https://caniuse.com/
+--> TypeScript / DART / CoffeeScript / LiveScript / ...
+
+--> Unit Testing
+--> E2E testing
+--> Liniting --> Static code analysis
+--> bundle
+--> minification / uglify
+
+let customerName = "Roger" ;
+
+let _c="Roger";
+
+--------
+
+JavaScript build tools
+
+* Grunt
+* Gulp
+* Webpack
+* vite
+
+----------
+
+Steps:
+1) webpack-example> npm init --y
+creates package.json
+2) install dependencies
+
+npm i webpack webpack-cli babel-loader @babel/core @babel/preset-env @babel/preset-react html-webpack-plugin webpack-dev-server -D
+
+
+
+CommonJS
+```
+
+lib.js
+
+function filter(..) {}
+
+function map(...) {}
+
+module.exports = {
+    filter, map
+}
+
+other.js
+const {filter, map} = require('./lib');
+```
+====
+
+ESM --> ES6 module system
+```
+lib.js
+
+export default function filter(..) {}
+
+export function map(...) {}
+
+other.js
+
+import filter, {map} from './lib'
+
+
+
+Babel
+
+if(condition)
+{
+    let a = 10;
+}
+
+// IIFE
+let _f = function ()(
+    var a = 10
+
+    var b = 100;
+
+    return a;
+)();
+
+```
+
+<script src="bundle.js"> </script>
+
+<script src="bundle.gedf#ds15.js"> </script>
