@@ -191,3 +191,22 @@ https://react.dev/learn/thinking-in-react
     <li>Two</li>
 </ul>
 
+==========
+
+JavaSCript unit testing libraries:
+1) Mocha
+2) Jasmine
+3) Jest
+
+React Testing Library
+
+accessing Elements:
+1) getByXXXXX
+2) queryByXXXX
+3) findByXXXX --> Async components
+
+npm test -- --coverage
+
+
+
+
