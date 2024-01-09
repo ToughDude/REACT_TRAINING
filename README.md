@@ -222,6 +222,11 @@ npm test -- --coverage
 
 Day 2
 
+1) Mocking
+2) E2E testing
+
+npm i cypress -D
+
 
 
 
