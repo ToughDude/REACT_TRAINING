@@ -1,6 +1,8 @@
 import React from 'react'
 import Product from '../model/Product'
 import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 type AppProps = {
     product: Product
@@ -19,6 +21,10 @@ export default function ProductCard({ product }: AppProps) {
                 </Card.Body>
                 <Card.Footer>
                     Rs. {product.price}
+                    &nbsp;
+                    <FontAwesomeIcon icon={faHeart} color="red" />
+                    &nbsp;
+                    <FontAwesomeIcon icon={faShoppingCart} color="blue" />
                 </Card.Footer>
             </Card>
         </div>

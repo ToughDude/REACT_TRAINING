@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@adobe/react-spectrum": "^3.33.0"
+  }
+}

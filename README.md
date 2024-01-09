@@ -320,7 +320,7 @@ function SomeComponent() {
 npx json-server --watch data.json --port 1234
 
 =====
-
+```
 class ProductList extends Component {
     render() {
         <ProductContext.Consumer>
@@ -333,3 +333,47 @@ class ProductList extends Component {
         </ProductContext.Consumer>
     }
 }
+```
+
+useReducer() is a hook to be used instead of useState() if
+1) mutation depends on previous state
+2) conditionally mutate the state
+
+```
+let initialState = {count : 0};
+
+		let countReducer = (state, action) => {
+			switch(action.type) {
+				case "INCREMENT" : return {count: state.count + action.payload};
+				case "DECREMENT" : return {count: state.count - 1};
+				default: return state;
+			}
+		};
+
+
+		function App() {
+			let [state, dispatch] = React.useReducer(countReducer, initialState);
+
+			function handleIncrement() {
+				let action = {"type" : "INCREMENT", payload : 10};
+				dispatch(action);
+			}
+
+			return (
+		    <div>
+		      <p>Count {state.count} </p>
+		      <button onClick={() => handleIncrement()}>
+		        Click me
+		      </button>
+		    </div>
+  	);
+
+	}
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+```
+
+https://codepen.io/banuprakash/pen/mGaPXW?editors=1111
+
