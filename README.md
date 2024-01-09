@@ -226,8 +226,64 @@ Day 2
 2) E2E testing
 
 npm i cypress -D
+============
+
+Component Life Cycle methods
+
+componentDidMount()
+shouldComponentUpdate()
+componentDidUpdate()
+componentWillUnmount()
 
 
+constructor() ==> render() ===> componentDidMount()
+intialize      ==> render with intial data ===> Make APi calls in componentDidMount()
+
+FCP ==> First Contentful paint
 
 
+closure ==> mechainism where returned function can access all the members of outer function
+
+shouldComponent() ==> for class component
+React.memo() ==> for functional component
+
+=======
+
+React Context
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+
+====
+
+1) react-router-dom
+IN SPA, different URLs has to render different components
+client side routing
+
+2) React Context
+
+3) axios ==> for API calls
+
+4) React Hooks
+16.8 ==> capabilities of class components in functional components
+like --> state, life-cycle methods
+
+5) bootstrap / react-bootstrap
+
+6) fontawesome
+
+===
+
+1) NavbarComponent
+2) ProductList
+3) ProductCard
+4) CartComponent
+5) CartList
+6) Details
+7) Default
+8) ProductForm
+
+
+npx create-react-app productapp --template typescript
+
+productapp> npm i axios react-router-dom bootstrap react-bootstrap @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 
