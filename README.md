@@ -287,3 +287,34 @@ npx create-react-app productapp --template typescript
 
 productapp> npm i axios react-router-dom bootstrap react-bootstrap @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 
+```
+class SomeComponent extends Component {
+    state = {
+        name: "",
+        age : 22
+    }
+
+    setName(n) {
+        this.setState({
+            name: n
+        })
+    }
+
+    setAge(a) {
+        this.setState({
+            age: a
+        })
+    }
+}
+
+function SomeComponent() {
+    let [name, setName] = useState("");
+    let [age, setAge] = useState(22);
+}
+```
+
+<ProductProvider>
+   <App />
+</ProductProvider>
+
+npx json-server --watch data.json --port 1234
