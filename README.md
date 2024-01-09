@@ -318,3 +318,18 @@ function SomeComponent() {
 </ProductProvider>
 
 npx json-server --watch data.json --port 1234
+
+=====
+
+class ProductList extends Component {
+    render() {
+        <ProductContext.Consumer>
+            {
+                value => {
+                    value.products.map(...)
+                }
+            }
+
+        </ProductContext.Consumer>
+    }
+}
