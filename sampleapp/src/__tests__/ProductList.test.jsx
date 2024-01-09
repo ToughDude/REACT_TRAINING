@@ -23,16 +23,16 @@ it("delete a Product <ProductList />", () => {
 })
 
 
-// it("filter Products <ProductList />", () => {
-//     let {container} = render(<ProductList />);
+it("filter Products <ProductList />", () => {
+    let {container} = render(<ProductList />);
 
-//     let txtBox = screen.getByPlaceholderText("search by name");
+    let txtBox = screen.getByPlaceholderText("search by name");
 
-//     fireEvent.change(txtBox, {"target":{"value": "Mac"}});
-//     screen.debug();
+    fireEvent.change(txtBox, {"target":{"value": "Mac"}});
+    screen.debug();
     
-//     let cards = container.querySelectorAll(".card");
+    let cards = container.querySelectorAll(".card");
 
-//     expect(cards.length).toBe(1);
+    expect(cards.length).toBe(1);
 
-// })
+})

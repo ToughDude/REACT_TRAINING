@@ -205,7 +205,23 @@ accessing Elements:
 2) queryByXXXX
 3) findByXXXX --> Async components
 
+```
+it("testing <Users> rendering", async () => {
+    render(<Users />);
+    await waitFor(async () => {
+        let divs = await screen.findAllByRole('button');
+        expect(divs.length).toBe(10);
+    }, {
+        timeout: 3000
+    })
+})
+```
 npm test -- --coverage
+
+=======
+
+Day 2
+
 
 
 
