@@ -9,7 +9,7 @@ function filterProducts(filterTerm) {
 }
 
 export default function ReactApp() {
-    const [isPending, startTransition] = useTransition();
+    // const [isPending, startTransition] = useTransition();
 
     const [filterTerm, setFilterTerm] = useState("");
     const filteredProducts = filterProducts(filterTerm);
@@ -23,7 +23,7 @@ export default function ReactApp() {
     return (
         <div>
             <input type="text" onChange={updateFilterTerm} />
-            {isPending && <p>Updating List...</p>}
+            {/* {isPending && <p>Updating List...</p>} */}
             <ProductList products={filteredProducts} />
         </div>
     )
