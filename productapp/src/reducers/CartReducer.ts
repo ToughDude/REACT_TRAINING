@@ -1,3 +1,4 @@
+import { stat } from "fs";
 import Cart from "../model/Cart"
 
 type Action = {
@@ -24,7 +25,19 @@ export default function CartReducer(state: CartState, action:Action) {
                 products: [...state.products, action.payload],
                 total: state.total + action.payload.amount
             }
-        case 'INCREMENT': return state;
+        case 'INCREMENT': 
+        let products = state.products;
+        products.forEach(p => {
+            if(p.id === action.payload) {
+                p.quantity++;
+                p.amount = p.price * p.quantity
+            }
+        });
+        let total = products.map(p => p.amount).reduce( (v1, v2) => v1 + v2);
+        return {
+            products,
+            total
+        };
         case 'CLEAR_CART': return {
             products: [],
             total: 0

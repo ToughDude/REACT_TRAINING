@@ -395,3 +395,16 @@ interface Product {
 
 type Cart: Optional<Product> = {id: 10};
 
+Order:
+{
+    id: 123, // auto_increment
+    item: [
+        {},
+        {}
+    ],
+    total: 3434,
+    customer: "me@gmail.com"
+}
+
+window.sessionStorage.setItem("customer", "banu@gmail.com");
+
