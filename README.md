@@ -582,4 +582,39 @@ let product = {
 
 let ref = product.updateName.bind(product);
 
-ref("Tim")
+ref("Tim");
+
+=======
+
+```
+
+export class CartItem {
+    id: number;
+    title: string;
+    price: number;
+    quantity: number;
+    amount: number; 
+    image: string;
+
+    constructor(id: number, title: string,
+        price: number, quantity: number, amount: number, image: string) {
+        makeAutoObservable(this);
+        
+    }
+
+    public increment(): void {
+        this.quantity++;
+        this.amount = this.price * this.quantity;
+    }
+}
+
+```
+
+
+function test () {
+    return {...}
+}
+
+type MyType = ReturnType<typeof test>
+
+========

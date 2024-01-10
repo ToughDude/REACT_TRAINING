@@ -1,14 +1,16 @@
 import { useContext } from "react";
 import CartItem from "../model/CartItem";
-import { CartContext } from "../context/CartContext";
+
 import { Button } from "react-bootstrap";
+// import { cartContext } from "..";
+import { observer } from "mobx-react-lite";
 
 type AppProps = {
     product: CartItem
 }
 
-export default function CartList({ product }: AppProps) {
-    let { increment } = useContext(CartContext);
+function CartList({ product }: AppProps) {
+    // let cartStore = useContext(cartContext);
     return <div className="row">
         <div className="col-md-2">
             <img src={product.image} style={{ width: '50px' }} />
@@ -17,7 +19,7 @@ export default function CartList({ product }: AppProps) {
             {product.title}
         </div>
         <div className="col-md-4">
-            <Button onClick={() => increment(product.id)}>+</Button>
+            <Button onClick={() => { }}>+</Button>
             &nbsp;
             {product.quantity}
             &nbsp;
@@ -31,3 +33,5 @@ export default function CartList({ product }: AppProps) {
         </div>
     </div>
 }
+
+export default observer(CartList);
