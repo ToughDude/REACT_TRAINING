@@ -384,9 +384,44 @@ HOC: memo() for shouldComponentUpdate()
 Hooks:
 1) useState()
 2) useEffect()
+
+// componentDidMount
+useEffect(() => {
+
+},[])
+
+// componentDidUpdate
+useEffect(() => {
+
+})
+
+
+// componentDidUpdate
+useEffect(() => {
+
+}, [name, age])
+
+
+// componentDidMount
+// componentWillUnMount 
+useEffect(() => {
+
+    return () => console.log("unmount)
+},[])
+
 3) useReducer()
 4) useContext()
 5) useNavigate()
+6) useParams
+7) useSearchParams()
+http://localhost:3000/products?page=1&size=20
+const [searchParams] = useSearchParams();
+
+const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
+
+const [size, setSize] = useState(Number(searchParams.get("size")) || 5);
+
+8) useCallback
 
 interface Product {
     id: number,

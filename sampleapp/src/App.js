@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ProductList from './components/ProductList';
-import ParentComponent from './trial/ParentComponent';
+import ParentComponent from './trial2/ParentComponent';
 
 function App() {
   return (
