@@ -538,3 +538,32 @@ npm i @adobe/react-spectrum
 
 ====
 
+```
+console.log("Hello");
+
+setTimeout(function one() {
+    console.log("1");
+}, 0);
+
+setTimeout(function two() {
+    console.log("2");
+}, 0);
+
+Promise.resolve().then(function p1() {
+    console.log("p1");
+});
+
+Promise.resolve().then(function p2() {
+    console.log("p2");
+});
+
+
+console.log("Bye");
+
+```
+
+Flux Architecture ==> State Management
+
+https://www.youtube.com/watch?v=8pDqJVdNa44&t=3769s
+
+npm i mobx mobx-logger mobx-react-lite
