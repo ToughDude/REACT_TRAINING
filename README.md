@@ -444,3 +444,55 @@ Order:
 
 window.sessionStorage.setItem("customer", "banu@gmail.com");
 
+======
+
+React Fragment
+<React.Fragment>
+    <h1>Hello</h1>
+    <p>Good day!!</p>
+</React.Fragment>
+
+Controlled Components and Uncontrolled Components
+
+```
+Controlled Components
+export default function ProductForm() {
+    let [name, setName] = useState();
+    let [price, setPrice] = useState();
+    function submit() {
+
+    }
+    return <>
+        Name: <input type="text" onChange={(evt) => setName(evt.target.value)}/>
+        price: <input type="text" onChange={(evt) => setPrice(evt.target.value)}/>
+
+        <button onClick={() => submit()}>Submit</button>
+    </>
+}
+```
+
+
+```
+UnControlled Components
+export default function ProductForm() {
+    let nameRef = useRef();
+    let priceRef = useRef();
+    function submit() {
+        let product = {
+            name: nameRef.current.value,
+            price: priceRef.current.value
+        }
+    }
+    return <>
+        Name: <input type="text" ref={nameRef}/>
+        price: <input type="text" ref={priceRef}/>
+
+        <button onClick={() => submit()}>Submit</button>
+    </>
+}
+```
+
+React Spectrum
+npm i @adobe/react-spectrum
+
+npm i @spectrum-web-components/card
