@@ -386,6 +386,7 @@ Hooks:
 2) useEffect()
 3) useReducer()
 4) useContext()
+5) useNavigate()
 
 interface Product {
     id: number,
