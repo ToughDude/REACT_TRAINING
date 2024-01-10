@@ -15,10 +15,10 @@ export default function ReactApp() {
     const filteredProducts = filterProducts(filterTerm);
 
     function updateFilterTerm(evt) {
-        startTransition(() => {
-            setFilterTerm(evt.target.value);
-        })
-        // setFilterTerm(evt.target.value);
+        // startTransition(() => {
+        //     setFilterTerm(evt.target.value);
+        // })
+        setFilterTerm(evt.target.value);
     }
     return (
         <div>

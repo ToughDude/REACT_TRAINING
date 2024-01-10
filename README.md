@@ -423,6 +423,47 @@ const [size, setSize] = useState(Number(searchParams.get("size")) || 5);
 
 8) useCallback
 
+```
+https://codepen.io/banuprakashc/pen/YzgWoEv?editors=1111
+function Parent() {
+    console.log("Parent renders");
+    let [name, setName] = React.useState("Rahul");
+    let [age, setAge] = React.useState(25);
+
+    let modifyName = React.useCallback(() => {
+        setName(name + "...")
+    }, [name])
+
+    let modifyAge = React.useCallback(() => {
+        setAge(age + 1)
+    }, [])
+
+    return (
+        <div>
+            Name : {name} <br />
+            Age : {age} <br />
+            <MemoChild handleClick={modifyAge} >
+                Change Age
+            </MemoChild>
+            <MemoChild handleClick={modifyName}>
+                Change Name
+            </MemoChild>
+        </div>
+    )
+} 
+
+
+function Child(props) {
+    console.log("Child renders!!!", props);
+    return <button onClick={() => props.handleClick()}>
+        {props.children}
+    </button>
+}
+
+const MemoChild = React.memo(Child);
+
+ReactDOM.render(<Parent />, document.getElementById("root"));
+```
 interface Product {
     id: number,
     title: string,
@@ -495,4 +536,5 @@ export default function ProductForm() {
 React Spectrum
 npm i @adobe/react-spectrum
 
-npm i @spectrum-web-components/card
+====
+
