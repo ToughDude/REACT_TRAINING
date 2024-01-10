@@ -567,3 +567,19 @@ Flux Architecture ==> State Management
 https://www.youtube.com/watch?v=8pDqJVdNa44&t=3769s
 
 npm i mobx mobx-logger mobx-react-lite
+
+tsconfig.json
+"experimentalDecorators": true
+
+REmove "cartContext, cartReducer and Cart Model"
+
+let product = {
+    "name": "Peter",
+    updateName: function(n) {
+        this.name = n
+    }
+}
+
+let ref = product.updateName.bind(product);
+
+ref("Tim")
