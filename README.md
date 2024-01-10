@@ -377,3 +377,21 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 https://codepen.io/banuprakash/pen/mGaPXW?editors=1111
 
+============
+
+Day 3
+HOC: memo() for shouldComponentUpdate() 
+Hooks:
+1) useState()
+2) useEffect()
+3) useReducer()
+4) useContext()
+
+interface Product {
+    id: number,
+    title: string,
+    price: number
+}
+
+type Cart: Optional<Product> = {id: 10};
+

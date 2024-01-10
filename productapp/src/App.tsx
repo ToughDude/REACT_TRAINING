@@ -6,6 +6,7 @@ import ProductList from './components/ProductList';
 
 import ProductForm from './components/ProductForm';
 import Default from './components/Default';
+import { ToastContainer } from '@react-spectrum/toast';
 
 const CartComponent = lazy(() => import ('./components/CartComponent'));
 const Details = lazy(() => import('./components/Details'));
@@ -13,6 +14,7 @@ const Details = lazy(() => import('./components/Details'));
 function App() {
   return (
     <div>
+     
       <NavbarComponent />
       <Routes>
         <Route path="/products" element={<ProductList />} />

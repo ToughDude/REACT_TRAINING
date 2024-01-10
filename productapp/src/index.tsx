@@ -6,14 +6,21 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProductProvider from './context/ProductContext';
 
+import { Provider, defaultTheme } from '@adobe/react-spectrum'
+import CartProvider from './context/CartContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+
   <BrowserRouter>
     <ProductProvider>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </ProductProvider>
   </BrowserRouter>
+
+
 );
