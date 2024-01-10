@@ -1,5 +1,6 @@
+import { memo } from "react";
 
-export default function AgeComponent(props) {
+function AgeComponent(props) {
 
     console.log("Age renders...")
     return (
@@ -11,3 +12,5 @@ export default function AgeComponent(props) {
         </div>
     )
 }
+
+export default memo(AgeComponent);

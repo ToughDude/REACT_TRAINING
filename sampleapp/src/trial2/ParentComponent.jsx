@@ -1,9 +1,8 @@
 import React, { Component, memo, useCallback, useState } from 'react'
-import NameComponent from './NameComponent'
-import AgeComponent from './AgeComponent'
+import MemoNameComponent from './NameComponent'
+import MemoAgeComponent from './AgeComponent'
 
-const MemoAgeComponent = memo(AgeComponent); // HOC
-const MemoNameComponent = memo(NameComponent); //HOC
+
 export default function ParentComponent() {
   let [name, setName] = useState("Roger");
   let [age, setAge] = useState(24);
@@ -14,7 +13,7 @@ export default function ParentComponent() {
 
   let updateAge = useCallback((age) => {
     setAge(age);
-  }, [age]);
+  }, []);
 
   console.log("Parent renders...");
   return (

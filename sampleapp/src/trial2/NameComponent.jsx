@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, memo } from 'react'
 
-export default function NameComponent(props) {
+function NameComponent(props) {
 
   console.log("Name renders...")
   return (
@@ -13,3 +13,5 @@ export default function NameComponent(props) {
   )
 }
 
+
+export default memo(NameComponent); //HOC
